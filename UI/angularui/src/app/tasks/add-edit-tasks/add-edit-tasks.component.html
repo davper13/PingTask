@@ -1,0 +1,38 @@
+<div class="form-froup row">
+    <label class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="Name" placeholder="Name">
+    </div>
+</div>
+<div class="form-froup row">
+    <label class="col-sm-2 col-form-label">Description</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="Description" placeholder="Description">
+    </div>
+</div>
+<div class="form-froup row">
+    <label class="col-sm-2 col-form-label">Url</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="Url" placeholder="Url">
+    </div>
+</div>
+<div class="form-froup row">
+    <label class="col-sm-2 col-form-label">CronExpression</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="CronExpression" placeholder="Cron Expression">
+    </div>
+</div>
+<div class="form-froup row">
+    <label class="col-sm-2 col-form-label">Is Active</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="IsActive" placeholder="Is Active">
+    </div>
+</div>
+
+<button (click)="addCronTask()" *ngIf="cron.Id==0" class="btn btn-primary">
+    Add
+</button>
+
+<button (click)="UpdateCronTask()" *ngIf="cron.Id!=0" class="btn btn-primary">
+    Update
+</button>
